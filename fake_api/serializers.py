@@ -13,6 +13,7 @@ class StudentSerializer(serializers.HyperlinkedModelSerializer):
         model = StudentModel
         fields = ('id', 'firts_name', 'last_name', 'username',
                   'password', 'teacher', 'classroom_id', 'access_code',
-                  'selected_course', 'owner_project', 'description_project',
-                  'reference_project', 'cover_image1', 'cover_image2',
-                  'last_time', 'total_time')
+                  'selected_course', 'owner_project1', 'description_project1',
+                  'reference_project1', 'score_project1', 'project_goals1', 'owner_project2', 'description_project2',
+                  'reference_project2', 'score_project2', 'project_goals2', 'cover_image1', 'cover_image2',
+                  'last_time', 'total_time', 'auth_parent')
