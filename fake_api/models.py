@@ -12,7 +12,7 @@ class StudentModel(models.Model):
     password = models.CharField(max_length=100)
     parent = models.ForeignKey('ParentsModel', on_delete=models.CASCADE, default=None)
     teacher = models.CharField(max_length=100)
-    classroom_id = models.CharField(max_length=60, unique=True)
+    classroom_id = models.UUIDField(default=uuid4, editable=False)
     access_code = models.CharField(max_length=60)
     selected_course = models.CharField(max_length=60)
     owner_project1 = models.CharField(max_length=100, null= True, blank=True)
